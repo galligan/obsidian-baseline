@@ -3,6 +3,10 @@ body.layout-golden-gate:not(.is-mobile) {
     margin: 0;
     box-shadow: none;
     border-radius: 0;
+
+    > .workspace-leaf-resize-handle {
+      border-color: var(--divider-color);
+    }
   }
 
   &.is-fullscreen .mod-sidedock.mod-left-split {
