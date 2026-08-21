@@ -26,14 +26,15 @@ body.layout-golden-gate:not(.is-mobile) {
       isolation: isolate;
       position: relative;
       gap: 0;
-      margin-inline: 4px;
+      margin-inline: 2px;
+      padding-inline: 2px;
 
       &::before {
         content: "";
         position: absolute;
         z-index: -1;
-        inset: 4px 0;
-        border-radius: calc(var(--tab-radius) + 4px);
+        inset: 6px 0;
+        border-radius: calc(var(--tab-radius) + 2px);
         background-color: var(--background-modifier-hover);
       }
     }
