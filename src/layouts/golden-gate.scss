@@ -27,7 +27,7 @@ body.layout-golden-gate:not(.is-mobile) {
       position: relative;
       gap: 0;
       margin-inline: 2px;
-      padding-inline: 2px;
+      padding-inline: 4px !important;
 
       &::before {
         content: "";
@@ -58,6 +58,18 @@ body.layout-golden-gate:not(.is-mobile) {
       transform: translateY(-50%);
       background-color: var(--tab-divider-color);
       opacity: 1;
+    }
+  }
+
+  &:not(.is-focused):not(.reduce-contrast-change):is(.tab-floating, .tab-floating-center)
+    .mod-root
+    .workspace-tabs:not(.mod-stacked) {
+    .workspace-tab-header {
+      background-color: transparent !important;
+    }
+
+    .workspace-tab-header.is-active {
+      background-color: var(--background-primary) !important;
     }
   }
 
