@@ -15,6 +15,10 @@ body.layout-golden-gate:not(.is-mobile) {
       box-shadow: none;
       background-color: var(--background-modifier-hover);
     }
+
+    .workspace-tab-header-tab-list .clickable-icon:is(:hover, .has-active-menu) svg.svg-icon {
+      transform: none;
+    }
   }
 
   .mod-sidedock.mod-left-split .nav-files-container > div {
