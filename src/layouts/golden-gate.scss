@@ -9,6 +9,18 @@ body.layout-golden-gate:not(.is-mobile) {
     }
   }
 
+  .mod-root {
+    .clickable-icon:not([aria-disabled="true"]):hover,
+    .clickable-icon.has-active-menu {
+      box-shadow: none;
+      background-color: var(--background-modifier-hover);
+    }
+  }
+
+  .mod-sidedock.mod-left-split .nav-files-container > div {
+    --nav-item-background-hover: var(--background-modifier-hover);
+  }
+
   &.is-fullscreen .mod-sidedock.mod-left-split {
     border-radius: 0;
   }
