@@ -21,6 +21,45 @@ body.layout-golden-gate:not(.is-mobile) {
     }
   }
 
+  &:is(.tab-floating, .tab-floating-center) .mod-root .workspace-tabs:not(.mod-stacked) {
+    .workspace-tab-header-container-inner {
+      isolation: isolate;
+      position: relative;
+      gap: 0;
+      margin-inline: 4px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 4px 0;
+        border-radius: calc(var(--tab-radius) + 4px);
+        background-color: var(--background-modifier-hover);
+      }
+    }
+
+    .workspace-tab-header {
+      background-color: transparent;
+    }
+
+    .workspace-tab-header.is-active {
+      background-color: var(--background-primary);
+      box-shadow: 0 0 0 1px var(--background-modifier-border);
+    }
+
+    .workspace-tab-header:not(.is-active):has(+ .workspace-tab-header:not(.is-active)) .workspace-tab-header-inner::after {
+      content: "";
+      position: absolute;
+      inset-block-start: 50%;
+      inset-inline-end: 0;
+      width: 1px;
+      height: 16px;
+      transform: translateY(-50%);
+      background-color: var(--tab-divider-color);
+      opacity: 1;
+    }
+  }
+
   .modal.mod-settings .vertical-tab-header {
     margin: 0;
     box-shadow: none;
