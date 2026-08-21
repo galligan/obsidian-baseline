@@ -1350,6 +1350,26 @@ settings:
 		level: 2
 		collapsed: true
 	-
+		id: golden-gate-settings-nav-item-opacity
+		title: Navigation foreground opacity
+		description: Set the idle navigation text opacity for the Golden Gate personality.
+		type: variable-number-slider
+		default: 75
+		min: 25
+		max: 100
+		step: 5
+		format: '%'
+	-
+		id: golden-gate-settings-nav-item-hover-opacity
+		title: Navigation foreground hover opacity
+		description: Set the hovered navigation text opacity for the Golden Gate personality.
+		type: variable-number-slider
+		default: 90
+		min: 25
+		max: 100
+		step: 5
+		format: '%'
+	-
 		id: plugins-grid-off
 		title: Plugins list view
 		description: Disable plugins grid layout.
@@ -3448,6 +3468,8 @@ body:not(.hover-sidedock) .style-settings-container .setting-item[data-id="hover
 body:not(.layout-macos, .layout-golden-gate, .layout-fusion) .style-settings-container .setting-item[data-id="reduce-contrast-change"],
 body:not(.input-golden-gate) .style-settings-container .setting-item[data-id="golden-gate-nav-item-opacity"],
 body:not(.input-golden-gate) .style-settings-container .setting-item[data-id="golden-gate-nav-item-hover-opacity"],
+body:not(.input-golden-gate) .style-settings-container .setting-item[data-id="golden-gate-settings-nav-item-opacity"],
+body:not(.input-golden-gate) .style-settings-container .setting-item[data-id="golden-gate-settings-nav-item-hover-opacity"],
 body:not(.readable-spacing) .style-settings-container .setting-item[data-id="readable-spacing-modifier"],
 body.view-header-title-hidden .style-settings-container .setting-item[data-id="file-header-visibility"] ~ .setting-item,
 body.block-width-off .style-settings-container .setting-item[data-id="line-width"] ~ .setting-item,

@@ -1,4 +1,23 @@
 body {
   --golden-gate-nav-item-opacity: 75%;
   --golden-gate-nav-item-hover-opacity: 90%;
+  --golden-gate-settings-nav-item-opacity: 75%;
+  --golden-gate-settings-nav-item-hover-opacity: 90%;
+}
+
+body.input-golden-gate:not(.is-mobile) .modal.mod-settings {
+  .vertical-tab-nav-item.is-active {
+    --text-normal: var(--text-accent);
+    background-color: var(--background-modifier-hover);
+    color: var(--text-accent);
+  }
+
+  .vertical-tab-nav-item:not(.is-active) {
+    color: rgb(from var(--text-normal) r g b / var(--golden-gate-settings-nav-item-opacity));
+
+    &:hover {
+      background-color: var(--background-modifier-hover);
+      color: rgb(from var(--text-normal) r g b / var(--golden-gate-settings-nav-item-hover-opacity));
+    }
+  }
 }
