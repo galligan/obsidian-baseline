@@ -85,7 +85,7 @@ body.is-mobile {
   }
 
   // Non-Liquid Glass
-  &:not(.input-cupertino) {
+  &:not(.input-cupertino, .input-golden-gate) {
     .mod-raised {
       backdrop-filter: none;
       box-shadow: none;

@@ -209,7 +209,7 @@ body.is-tablet .modal.mod-sidebar-layout {
   }
 }
 
-body:is(.input-cupertino, .input-material) {
+body:is(.input-cupertino, .input-golden-gate, .input-material) {
   .modal.mod-settings .vertical-tab-nav-item {
     &[data-setting-id="editor"] .vertical-tab-nav-item-icon {
       --setting-nav-icon-background: var(--color-blue);

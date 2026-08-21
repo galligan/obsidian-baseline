@@ -1,4 +1,4 @@
-body.input-cupertino {
+body:is(.input-cupertino, .input-golden-gate) {
   --setting-nav-icon-background: var(--color-base-50);
 
   .modal.mod-settings .vertical-tab-nav-item {
@@ -42,7 +42,7 @@ body.input-cupertino {
   }
 }
 
-body.input-cupertino:not(.is-mobile) {
+body:is(.input-cupertino, .input-golden-gate):not(.is-mobile) {
   --settings-background: var(--background-primary);
   --setting-items-padding-x: var(--side-padding);
   --setting-items-padding-y: calc(12px * var(--density-modifier));
@@ -76,7 +76,7 @@ body.input-cupertino:not(.is-mobile) {
   }
 }
 
-body.input-cupertino.is-mobile {
+body:is(.input-cupertino, .input-golden-gate).is-mobile {
   .modal.mod-settings .vertical-tab-nav-item .vertical-tab-nav-item-icon {
     padding: 5px;
     border-radius: 8px;
@@ -85,7 +85,7 @@ body.input-cupertino.is-mobile {
   }
 }
 
-body.input-cupertino.is-phone {
+body:is(.input-cupertino, .input-golden-gate).is-phone {
   --setting-items-radius: var(--radius-m);
   --setting-group-heading-size: var(--font-ui-medium);
 
@@ -136,7 +136,7 @@ body.input-cupertino.is-phone {
   }
 }
 
-body.input-cupertino.is-tablet {
+body:is(.input-cupertino, .input-golden-gate).is-tablet {
   --setting-items-padding: calc(16px * var(--density-modifier)) var(--side-padding);
 
   .modal.mod-settings {

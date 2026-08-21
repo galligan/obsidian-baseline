@@ -1,4 +1,4 @@
-body.input-cupertino {
+body:is(.input-cupertino, .input-golden-gate) {
   --side-padding: 20px;
 
   --p-spacing: 1rem;
