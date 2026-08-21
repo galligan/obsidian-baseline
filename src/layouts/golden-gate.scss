@@ -21,7 +21,7 @@ body.layout-golden-gate:not(.is-mobile) {
     }
   }
 
-  .mod-sidedock.mod-left-split .nav-files-container > div {
+  &.nav-item-strong.input-cupertino .mod-sidedock.mod-left-split .nav-files-container > div {
     --nav-item-background-hover: var(--background-modifier-hover);
   }
 
