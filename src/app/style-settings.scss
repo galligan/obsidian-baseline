@@ -735,6 +735,9 @@ settings:
 				label: macOS
 				value: layout-macos
 			-
+				label: Golden Gate
+				value: layout-golden-gate
+			-
 				label: Classic
 				value: layout-classic
 			-
@@ -3419,7 +3422,7 @@ body:not(.accented-interface:not(.default-light.default-dark, .material-light.ma
   .setting-item[data-id="color-scheme-accent"],
 body:is(.tab-floating, .tab-floating-center) .style-settings-container .setting-item[data-id="tab-divider"],
 body:not(.hover-sidedock) .style-settings-container .setting-item[data-id="hover-sidedock-trigger-area"] ~ .setting-item,
-body:not(.layout-macos, .layout-fusion) .style-settings-container .setting-item[data-id="reduce-contrast-change"],
+body:not(.layout-macos, .layout-golden-gate, .layout-fusion) .style-settings-container .setting-item[data-id="reduce-contrast-change"],
 body:not(.readable-spacing) .style-settings-container .setting-item[data-id="readable-spacing-modifier"],
 body.view-header-title-hidden .style-settings-container .setting-item[data-id="file-header-visibility"] ~ .setting-item,
 body.block-width-off .style-settings-container .setting-item[data-id="line-width"] ~ .setting-item,

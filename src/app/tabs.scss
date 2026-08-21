@@ -87,12 +87,13 @@ body:not(.is-phone) .workspace .mod-root {
 }
 
 // Editor panel: Baseline
-body.tab-default:is(.layout-cupertino, .layout-macos, .layout-classic, .layout-minimal, .layout-frame, .layout-viewfinder) .mod-root .workspace-tab-header,
+body.tab-default:is(.layout-cupertino, .layout-macos, .layout-golden-gate, .layout-classic, .layout-minimal, .layout-frame, .layout-viewfinder) .mod-root .workspace-tab-header,
 body.tab-default.layout-fusion .workspace:not(.is-left-sidedock-open):not(.is-right-sidedock-open) .mod-root .workspace-tab-header {
   --tab-outline-width: 1px;
 }
 body.is-tablet:not(.tab-floating, .tab-floating-center, .tab-underline, .tab-underline-accented):not(
     .layout-macos,
+    .layout-golden-gate,
     .layout-classic,
     .layout-minimal,
     .layout-border,
@@ -516,7 +517,7 @@ body:is(.tab-top-left-stacked, :not(.css-settings-manager)):not(.mod-macos):not(
   margin-top: calc(-1 * var(--header-height) + 8px);
   margin-right: 48px;
 }
-body:is(.tab-top-left-stacked, :not(.css-settings-manager)):not(.mod-macos):is(.layout-macos, .layout-fusion):not(.show-ribbon)
+body:is(.tab-top-left-stacked, :not(.css-settings-manager)):not(.mod-macos):is(.layout-macos, .layout-golden-gate, .layout-fusion):not(.show-ribbon)
   .mod-sidedock.mod-left-split
   .mod-top-left-space
   .workspace-tab-header-container-inner {
@@ -537,7 +538,7 @@ body:is(.tab-top-left-stacked, :not(.css-settings-manager)).mod-macos:not(.is-hi
 }
 
 // Side panels: Dropdown tabs
-body.tab-top-left-dropdown:is(.layout-macos, .layout-fusion):not(.is-grabbing)
+body.tab-top-left-dropdown:is(.layout-macos, .layout-golden-gate, .layout-fusion):not(.is-grabbing)
   .mod-sidedock.mod-left-split
   .workspace-tabs.mod-top-left-space
   .workspace-tab-header {

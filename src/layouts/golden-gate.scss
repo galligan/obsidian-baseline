@@ -1,0 +1,21 @@
+body.layout-golden-gate:not(.is-mobile) {
+  .mod-sidedock.mod-left-split {
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  &.is-fullscreen .mod-sidedock.mod-left-split {
+    border-radius: 0;
+  }
+
+  &.show-ribbon:not(.hover-ribbon) .mod-sidedock.mod-left-split:not(.is-sidedock-collapsed) {
+    margin-left: calc(-1 * var(--ribbon-width));
+  }
+
+  &:not(.tab-top-left-stacked) .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container,
+  .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container .sidebar-toggle-button {
+    min-height: var(--header-height);
+    max-height: var(--header-height);
+  }
+}

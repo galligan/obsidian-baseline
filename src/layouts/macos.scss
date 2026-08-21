@@ -1,4 +1,4 @@
-body:is(.layout-macos, .layout-fusion):not(.is-mobile) {
+body:is(.layout-macos, .layout-golden-gate, .layout-fusion):not(.is-mobile) {
   --shadow-sidedock-spread: -32px 0 0 32px var(--background-primary);
   --shadow-surface: 0 0 0 1px var(--background-modifier-hover);
   --tab-outline-width: 1px;
@@ -14,7 +14,7 @@ body:is(.layout-macos, .layout-fusion):not(.is-mobile) {
     }
     .modal.mod-settings .vertical-tab-header,
     .mod-sidedock.mod-left-split,
-    &.layout-macos .mod-sidedock.mod-right-split,
+    &:is(.layout-macos, .layout-golden-gate) .mod-sidedock.mod-right-split,
     &.input-cupertino:is(.tab-floating, .tab-floating-center) .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
       background-color: var(--background-modifier-hover) !important;
       box-shadow: none !important;
@@ -59,7 +59,7 @@ body:is(.layout-macos, .layout-fusion):not(.is-mobile) {
   &:not(.is-translucent).theme-dark .mod-sidedock {
     background-color: hsl(from var(--background-primary) h s calc(l - 2));
   }
-  &.is-translucent.layout-macos .mod-sidedock,
+  &.is-translucent:is(.layout-macos, .layout-golden-gate) .mod-sidedock,
   &.is-translucent.layout-fusion .mod-sidedock.mod-left-split {
     background-color: rgba(from var(--background-primary) r g b / 50%) !important;
   }
@@ -106,7 +106,7 @@ body:is(.layout-macos, .layout-fusion):not(.is-mobile) {
 }
 
 // Ribbon
-body:is(.layout-macos, .layout-fusion:not(.tab-floating, .tab-floating-center)):not(.is-mobile).mod-macos.is-hidden-frameless
+body:is(.layout-macos, .layout-golden-gate, .layout-fusion:not(.tab-floating, .tab-floating-center)):not(.is-mobile).mod-macos.is-hidden-frameless
   .workspace-ribbon.mod-left.is-collapsed {
   margin-top: calc(var(--header-height) - 1px);
   padding-top: 8px;
@@ -114,7 +114,7 @@ body:is(.layout-macos, .layout-fusion:not(.tab-floating, .tab-floating-center)):
 }
 
 // Tab style
-body.layout-macos:not(.is-phone):not(.tab-floating, .tab-floating-center) .mod-root,
+body:is(.layout-macos, .layout-golden-gate):not(.is-phone):not(.tab-floating, .tab-floating-center) .mod-root,
 body.layout-fusion:not(.is-phone):not(.tab-floating, .tab-floating-center) .workspace:not(.is-left-sidedock-open):not(.is-right-sidedock-open) .mod-root {
   .workspace-tab-header-container {
     border-bottom: var(--tab-outline-width) solid var(--tab-outline-color);
@@ -124,7 +124,7 @@ body.layout-fusion:not(.is-phone):not(.tab-floating, .tab-floating-center) .work
   }
 }
 
-body:is(.layout-macos, .layout-fusion).is-tablet {
+body:is(.layout-macos, .layout-golden-gate, .layout-fusion).is-tablet {
   &.theme-light {
     --shadow-surface:
       inset 1px 1px 2px rgba(255, 255, 255, 0.5), inset -1px -1px 2px rgba(255, 255, 255, 0.5), inset 0 4px 16px rgba(255, 255, 255, 0.025),
@@ -175,11 +175,11 @@ body:is(.layout-macos, .layout-fusion).is-tablet {
   }
 }
 
-// macOS specific
-body.layout-macos .workspace-split.mod-root .workspace-tab-container {
+// macOS workspaces
+body:is(.layout-macos, .layout-golden-gate) .workspace-split.mod-root .workspace-tab-container {
   border-radius: 0;
 }
-body.layout-macos:not(.is-mobile) {
+body:is(.layout-macos, .layout-golden-gate):not(.is-mobile) {
   &:not(.is-hidden-frameless) {
     .titlebar {
       background-color: var(--background-primary);
@@ -201,7 +201,7 @@ body.layout-macos:not(.is-mobile) {
   }
 }
 
-body.layout-macos.is-tablet {
+body:is(.layout-macos, .layout-golden-gate).is-tablet {
   .workspace-drawer.is-pinned.mod-right {
     border-width: var(--divider-width);
   }
